@@ -1,0 +1,28 @@
+# Configuration file for rover path following
+# You can modify these values and load them with the launch file
+
+rover_path_follower:
+  ros__parameters:
+    # Look-ahead parameters
+    L_min: 2.0          # Minimum look-ahead distance (m)
+    k: 1.5              # Cross-track error multiplier
+
+    # Cross-track error thresholds  
+    CTE_threshold: 0.3   # When to start correction (m)
+    CTE_tolerance: 0.1   # When correction is complete (m)
+
+    # Heading control
+    heading_tol: 0.05    # Heading tolerance (rad) - about 3 degrees
+
+    # Velocity parameters
+    forward_velocity: 1.0   # Forward velocity (m/s)
+    angular_velocity: 0.5   # Angular velocity for turns (rad/s)
+
+    # Control timing
+    control_frequency: 10.0  # Control loop frequency (Hz)
+
+    # Reference path definition (straight line)
+    path_start_x: 0.0    # Path start X coordinate (m)
+    path_start_y: 0.0    # Path start Y coordinate (m)
+    path_end_x: 20.0     # Path end X coordinate (m)
+    path_end_y: 0.0      # Path end Y coordinate (m)
